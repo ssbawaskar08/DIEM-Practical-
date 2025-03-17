@@ -1,5 +1,9 @@
 # practical date: 17-03-25 Question1
-# Aim: Take input of grade from user and check for the following condition- 1) 90-100 => A grade 2) 70-90 => B grade 3) 40-70 => C grade 4) less than 40 => Fail. 
+# Aim: Take input of grade from user and check for the following condition- 
+#                   1) 90-100 => A grade 
+#                   2) 70-90 => B grade 
+#                   3) 40-70 => C grade 
+#                   4) less than 40 => Fail. 
 n = 1 
 while(n):
     grade = int(input("Please enter your Grade: "))
