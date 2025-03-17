@@ -6,9 +6,9 @@ while(n):
     if(unit in range(0,101)):
         print(f"Your Bill is {unit * 5}" )
     elif(unit in range(101,200)):
-        print(unit*7)
+        print(f"Your Bill is {unit * 7}")
     elif(unit > 200):
-        print(unit*10)
+        print(f"Your Bill is {unit * 10}")
     elif(unit== -1):
         n = 0 
         print("Exitting........!")
