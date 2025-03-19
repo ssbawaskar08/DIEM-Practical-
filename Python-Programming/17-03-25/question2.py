@@ -1,5 +1,8 @@
 # practical date: 17-03-25 Question2
-# Aim: Take input of grade from user and check for the following condition- 1) if the input lies between 0-100 then calculate according to 5rs per unit 2) if the input lies between 101-200 the calculate according to 7rs per unit 3) if input is greater than 200 then calculate according to 10rs per unit.
+# Aim: Take input of grade from user and check for the following condition- 
+#             1) if the input lies between 0-100 then calculate according to 5rs per unit 
+#             2) if the input lies between 101-200 the calculate according to 7rs per unit 
+#             3) if input is greater than 200 then calculate according to 10rs per unit.
 n=1
 while(n):
     unit = int(input("Please enter your Units: "))
