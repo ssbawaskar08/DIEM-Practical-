@@ -13,22 +13,55 @@
     <h3 id="char"></h3>
     <h3 id="charc"></h3>
     <h3 id="concat"></h3>
+    <h3 id="ss"></h3>
+    <h3 id ="push"></h3>
+    <h3 id ="pop"></h3>
+    <h3 id ="shift"></h3>
+    <h3 id ="unshift"></h3>
+    <h3 id ="slice"></h3>
+
 
 </body>
-    <script>
-        let a=3;
-        let b=6;
-        let carDescription = "Is the safest Car in the World"
-        console.log("This is sum of A and B: "+a+b);
-        console.log("This is difference between A and B: "+a*b);
-        console.log("This is division of A and B: "+b/a);
-        let carName = "Volvo";
-        document.getElementById("demo").innerHTML = carName;
-        document.getElementById("length").innerHTML = "The length of the word is: "+carName.length;
-        document.getElementById("uc").innerHTML = "LowerCase: "+carName.toUpperCase();
-        document.getElementById("lc").innerHTML = carName.toLowerCase();
-        document.getElementById("char").innerHTML = carName.charAt(4).toUpperCase();
-        document.getElementById("charc").innerHTML = carName.charCodeAt(4);
-        document.getElementById("concat").innerHTML = carName.concat(" ",carDescription);
-    </script>
+<script>
+    let a = 3;
+    let b = 6;
+    
+    const car = ["Volvo", "Mahindra", "Toyota", "Honda", "Ford"];
+    let carDescription = [
+        "is the safest car in the world",
+        "is an Indian giant in car manufacturing",
+        "is the brand that vouches for reliability",
+        "is the Japanese car maker",
+        "is the American giant in car manufacturing"
+    ];
+
+    console.log("Sum of A and B: " + (a + b));  // Corrected sum
+    console.log("Difference between A and B: " + (a - b));
+    console.log("Multiplication of A and B: " + (a * b));
+    console.log("Division of A and B: " + (b / a));
+
+    let carName = "Volvo";
+    document.getElementById("demo").innerHTML = carName;
+    document.getElementById("length").innerHTML = "The length of the word is: " + carName.length;
+    document.getElementById("uc").innerHTML = "Uppercase: " + carName.toUpperCase();
+    document.getElementById("lc").innerHTML = "Lowercase: " + carName.toLowerCase();
+    document.getElementById("char").innerHTML = carName.charAt(4).toUpperCase();
+    document.getElementById("charc").innerHTML = carName.charCodeAt(4);
+    document.getElementById("ss").innerHTML = carName.substring(2);
+    document.getElementById("concat").innerHTML = carName.concat(" ", carDescription[0]);  
+    car.push("Tesla");  
+    document.getElementById("push").innerHTML = "After push: " + car.join(", ");
+
+    car.pop(); 
+    document.getElementById("pop").innerHTML = "After pop: " + car.join(", ");
+
+    car.shift();
+    document.getElementById("shift").innerHTML = "After shift: " + car.join(", ");
+
+    car.unshift("Mercedes");  
+    document.getElementById("unshift").innerHTML = "After unshift: " + car.join(", ");
+
+    let slicedCars = car.slice(1, 3); 
+    document.getElementById("slice").innerHTML = "Sliced Cars: " + slicedCars.join(", ");
+</script>
 </html>
