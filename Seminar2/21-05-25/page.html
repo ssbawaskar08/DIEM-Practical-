@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical 6</title>
+</head>
+<script>
+    function myFunction() {
+        const fname = document.getElementById("fname").value;
+        const lname = document.getElementById("lname").value;
+        let fullname = fname + " " + lname;
+        document.getElementById("fullname").innerHTML = fullname;
+    }
+</script>
+<body>
+    <form>
+        <br>
+        <label for="fname">Please enter your First Name: </label>
+        <input id="fname" type="text" name="fname"><br><br>
+        <label for="lname">Please enter your Last Name: </label>
+        <input id="lname" type="text" name="lname"><br><br>
+        <button type="button" onclick="myFunction()">Submit</button>
+        <h1>Your Full Name is: <i><span id="fullname"></i></span></h1>
+    </form>
+</body>
+</html>
