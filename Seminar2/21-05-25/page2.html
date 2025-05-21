@@ -14,11 +14,39 @@
             document.getElementById("result").innerHTML = "The number is odd";
         }
     }
+function Primecheck() {
+    let num = parseInt(document.getElementById("number").value); 
+    let resultElement = document.getElementById("result");
+
+    if (num <= 1) {
+        resultElement.innerHTML = "The number is not prime";
+        return;
+    }
+    if (num === 2) {
+        resultElement.innerHTML = "The number is a prime number";
+        return;
+    }
+    if (num % 2 === 0) {
+        resultElement.innerHTML = "The number is not prime";
+        return;
+    }
+
+    for (let i = 3; i * i <= num; i += 2) {
+        if (num % i === 0) {
+            resultElement.innerHTML = "The number is not prime";
+            return; 
+        }
+    }
+
+    resultElement.innerHTML = "The number is a prime number"; 
+}
 </script>
 <body>
     <label for="number">Please Enter the number to be tested: </label>
-    <input type="number" name="number" id="number">
-    <button type="button" onclick="check()">Submit </button>
-    <div id="result"></div>
+    <input type="number" name="number" id="number"><br><br>
+    <button type="button" onclick="check()">Even Odd check </button>
+    <button type="button" onclick="Primecheck()">Prime check </button>
+
+    <h3 id="result"></h3>
 </body>
 </html>
