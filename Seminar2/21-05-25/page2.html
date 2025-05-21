@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Even Odd Checker</title>
+</head>
+<script>
+    function check() {
+        let num = document.getElementById("number").value
+        if (num %2==0) {
+            document.getElementById("result").innerHTML = "The number is even";
+        }else {
+            document.getElementById("result").innerHTML = "The number is odd";
+        }
+    }
+</script>
+<body>
+    <label for="number">Please Enter the number to be tested: </label>
+    <input type="number" name="number" id="number">
+    <button type="button" onclick="check()">Submit </button>
+    <div id="result"></div>
+</body>
+</html>
